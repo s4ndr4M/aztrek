@@ -1,10 +1,10 @@
-    </main>
+</main>
 
-    <footer class="site-footer">
-        <div class="container">
-            Copyright © 2013 Aztrek
-        </div>
-    </footer>
+<footer class="site-footer">
+    <div class="container">
+        Copyright © 2018 Aztrek
+    </div>
+</footer>
 
 </body>
 </html>
