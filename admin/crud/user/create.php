@@ -1,6 +1,6 @@
 <?php require_once '../../layout/header.php'; ?>
 
-<h1>Nouveau membre</h1>
+<h1>Nouvel utilisateur</h1>
 
 <form action="create_query.php" method="post" enctype="multipart/form-data">
     <div class="form-group">

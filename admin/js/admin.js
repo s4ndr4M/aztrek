@@ -15,14 +15,10 @@ $(document).ready(function () {
             .then(function (res) {
                 if (res.status === 200) {
                     row.fadeOut();
-                    return res.json();
                 } else {
                     alert("Erreur lors de la suppression");
                 }
             })
-            .then(function(data) {
-                alert("La personne " + data.firstname + " a été supprimée !")
-            });
         }
     });
 

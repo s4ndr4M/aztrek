@@ -3,9 +3,12 @@
 require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
+$id = $_POST["id"];
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
-$picture = "";
+
+$user = getOneEntity("user", $id);
+$picture = $user["picture"]; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
 if (isset($_FILES["picture"])) {

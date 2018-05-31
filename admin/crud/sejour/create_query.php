@@ -3,7 +3,12 @@
 require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
-$nom = $_POST["nom"];
+$title = $_POST["title"];
+$description = $_POST["description"];
+$price = $_POST["price"];
+$date_start = $_POST["date_start"];
+$date_end = $_POST["date_end"];
+$category_id = $_POST["category_id"];
 
 $picture = "";
 
@@ -15,7 +20,7 @@ if ($_FILES["picture"]["error"] == 0) {
 }
 
 // Insertion des données en BDD
-insertPays($nom, $picture);
+insertProject($title, $picture, $description, $price, $date_start, $date_end, $category_id);
 
 // Redirection vers la liste
 header("Location: index.php");
