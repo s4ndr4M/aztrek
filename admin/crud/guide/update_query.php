@@ -7,8 +7,8 @@ $id = $_POST["id"];
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
 
-$member = getOneEntity("member", $id);
-$picture = $member["picture"]; // Image présente avant update
+$guide = getOneEntity("guide", $id);
+$picture = $guide["picture"]; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
 if (isset($_FILES["picture"])) {

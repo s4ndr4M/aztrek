@@ -23,7 +23,7 @@ function getAllProjects(int $limit = 999) {
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
-    $stmt->execute();
+    //$stmt->execute();
 
     return $stmt->fetchAll();
 }

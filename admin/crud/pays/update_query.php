@@ -4,11 +4,10 @@ require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
 $id = $_POST["id"];
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
+$pays = $_POST["name"];
 
-$member = getOneEntity("member", $id);
-$picture = $member["picture"]; // Image présente avant update
+$pays = getOneEntity("pays", $id);
+$picture = $pays["picture"]; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
 if (isset($_FILES["picture"])) {
@@ -18,7 +17,7 @@ if (isset($_FILES["picture"])) {
 }
 
 // Insertion des données en BDD
-insertMember($firstname, $lastname, $picture);
+insertPays($firstname, $lastname, $picture);
 
 // Redirection vers la liste
 header("Location: index.php");

@@ -12,14 +12,14 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/sejour/">
-           <i class="fa fa-plane"></i>
-            Sejour
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/guide/">
+          <i class="fa fa-map-signs"></i>
+            Guide
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/pays/">
-            <i class="fa fa-briefcase"></i>
+            <i class="fa fa-flag"></i>
             Pays
         </a>
     </li>

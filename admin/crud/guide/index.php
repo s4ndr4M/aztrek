@@ -1,12 +1,12 @@
 <?php
 require_once '../../../model/database.php';
 
-$list_projects = getAllProjects();
+$list_guide = getAllEntity("pays");
 
 require_once '../../layout/header.php';
 ?>
 
-<h1>Gestion des projets</h1>
+<h1>Gestion des Guides</h1>
 
 <a href="create.php" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter</a>
 
@@ -15,19 +15,17 @@ require_once '../../layout/header.php';
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>Titre</th>
-            <th>Date de début</th>
+            <th>Nom</th>
+            <th>Prenom</th>
             <th>Photo</th>
-            <th>Categorie</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($list_projects as $project) : ?>
+        <?php foreach ($list_guide as $guide) : ?>
             <tr>
-                <td><?php echo $project["title"]; ?></td>
-                <td><?php echo $project["date_start"]; ?></td>
-                <?php $picture = (!empty($project["picture"])) ? "../../../uploads/" . $project["picture"] : "http://via.placeholder.com/150x150"; ?>
+                <td><?php echo $guide["firstname"]; ?></td>
+                <td><?php echo $guide["lastname"]; ?></td>
+                <?php $picture = (!empty($guide["picture"])) ? "../../../uploads/" . $project["picture"] : "http://via.placeholder.com/150x150"; ?>
                 <td><img src="<?php echo $picture; ?>" class="img-thumbnail"></td>
                 <td><?php echo $project["category"]; ?></td>
                 <td>
